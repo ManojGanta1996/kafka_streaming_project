@@ -1,0 +1,8 @@
+echo -e "\n--- JAVA ---"; java -version; \
+echo -e "\n--- PYTHON ---"; python --version; \
+echo -e "\n--- PIP ---"; pip --version; \
+echo -e "\n--- PYSPARK ---"; python -c "import pyspark; print(pyspark.__version__)"; \
+echo -e "\n--- SCALA ---"; scala -version; \
+echo -e "\n--- SPARK ---"; pyspark --version; \
+echo -e "\n--- KAFKA ---"; kafka-topics.sh --version 2>/dev/null || echo "Kafka CLI not in PATH"; \
+echo -e "\n--- PIP PACKAGES ---"; pip freeze | grep -E 'pyspark|kafka|avro|protobuf'
